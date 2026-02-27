@@ -14,6 +14,41 @@
 </head>
 <body>
     <div class="container">
+        <!-- Dancing Kitty -->
+        <div class="dancing-kitty">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="80" height="100">
+                <!-- Body -->
+                <ellipse cx="50" cy="70" rx="25" ry="35" fill="#FF9999"/>
+                
+                <!-- Head -->
+                <circle cx="50" cy="35" r="20" fill="#FF9999"/>
+                
+                <!-- Ears -->
+                <polygon points="35,15 30,0 40,10" fill="#FF9999"/>
+                <polygon points="65,15 70,0 60,10" fill="#FF9999"/>
+                <polygon points="36,12 33,5 38,11" fill="#FFCCCC"/>
+                <polygon points="64,12 67,5 62,11" fill="#FFCCCC"/>
+                
+                <!-- Eyes -->
+                <circle cx="43" cy="32" r="2.5" fill="#000"/>
+                <circle cx="57" cy="32" r="2.5" fill="#000"/>
+                
+                <!-- Mouth -->
+                <path d="M 50 38 Q 48 41 45 40" stroke="#000" stroke-width="1.5" fill="none"/>
+                <path d="M 50 38 Q 52 41 55 40" stroke="#000" stroke-width="1.5" fill="none"/>
+                
+                <!-- Nose -->
+                <polygon points="50,36 48,39 52,39" fill="#FF6666"/>
+                
+                <!-- Front Paws -->
+                <rect x="38" y="95" width="6" height="18" fill="#FF9999"/>
+                <rect x="56" y="95" width="6" height="18" fill="#FF9999"/>
+                
+                <!-- Tail (animated) -->
+                <path d="M 70 65 Q 85 60 80 45" stroke="#FF9999" stroke-width="6" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+
         <header>
             <h1>PWA Demo App</h1>
             <p class="subtitle">Works offline on iPhone!</p>
