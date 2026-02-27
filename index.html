@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A90E2">
+    <meta name="description" content="A simple PWA demo app that works offline on iPhone">
+    
+    <title>PWA Demo App</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icon-192.png">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PWA Demo App</h1>
+            <p class="subtitle">Works offline on iPhone!</p>
+        </header>
+
+        <main>
+            <!-- Feature 1: Click Counter -->
+            <section class="card">
+                <h2>📊 Click Counter</h2>
+                <p>This counter works offline and saves between sessions.</p>
+                <div class="counter-display" id="counterDisplay">0</div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="incrementCounter()">Click Me</button>
+                    <button class="btn btn-secondary" onclick="resetCounter()">Reset</button>
+                </div>
+            </section>
+
+            <!-- Feature 2: Offline Status -->
+            <section class="card">
+                <h2>📡 Connection Status</h2>
+                <p>This updates when you go offline (airplane mode).</p>
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-dot online"></span>
+                    <span id="statusText">Online</span>
+                </div>
+            </section>
+
+            <!-- Feature 3: Notifications -->
+            <section class="card">
+                <h2>🔔 Notifications</h2>
+                <p>Send yourself a test notification (requires permission).</p>
+                <button class="btn btn-primary" onclick="requestNotificationPermission()">Enable Notifications</button>
+                <button class="btn btn-success" onclick="sendTestNotification()" id="notificationBtn" disabled>Send Notification</button>
+            </section>
+
+            <!-- Feature 4: Install Prompt -->
+            <section class="card">
+                <h2>📲 Install App</h2>
+                <p>On iPhone: Tap Share → Add to Home Screen</p>
+                <p>On Android: Tap the install button below</p>
+                <button class="btn btn-primary" onclick="promptInstall()" id="installBtn" style="display: none;">Install App</button>
+                <p id="installMessage" style="color: #666; font-size: 0.9em; margin-top: 10px;">
+                    Ready to be installed on home screen
+                </p>
+            </section>
+
+            <!-- Feature 5: App Info -->
+            <section class="card">
+                <h2>ℹ️ App Info</h2>
+                <p>You're running this app in:</p>
+                <div class="info-box">
+                    <p><strong>User Agent:</strong> <span id="userAgent">Loading...</span></p>
+                    <p><strong>Service Worker:</strong> <span id="swStatus">Checking...</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PWA Demo | All features work offline</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
