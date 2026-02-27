@@ -88,6 +88,43 @@ header h1 {
     margin-bottom: 5px;
 }
 
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-top h1 {
+    margin: 0;
+}
+
+.refresh-btn {
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(180deg);
+}
+
+.refresh-btn:active {
+    transform: rotate(180deg) scale(0.95);
+}
+
 .subtitle {
     font-size: 0.95em;
     opacity: 0.95;
