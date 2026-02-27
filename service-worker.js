@@ -2,7 +2,7 @@
 // SERVICE WORKER - Handles caching and offline support
 // ==========================================
 
-const CACHE_NAME = 'pwa-demo-cache-v1';
+const CACHE_NAME = 'pwa-demo-cache-v2';
 const urlsToCache = [
     '/',
     '/index.html',
